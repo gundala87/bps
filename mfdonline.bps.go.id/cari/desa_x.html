@@ -1,0 +1,749 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="id" lang="id">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+        <meta name="language" content="id" />
+        <meta name="robots" content="noindex,nofollow" />
+        <style type="text/css" media="screen">
+            @font-face {
+                font-family: Telex;
+                src: url('css/Telex.ttf');
+            }   
+        </style>
+        <link rel="shortcut icon" href="images/bps.gif">
+            <link rel="stylesheet" href="css/style.css" type="text/css" media="screen, projection" />
+            <link rel="stylesheet" href="css/magnific-popup.css" type="text/css" media="screen, projection" />
+            <link rel="stylesheet" href="css/tulisan.css" type="text/css" media="screen, projection" />
+            <link rel="stylesheet" href="js/css/select2.css" type="text/css" media="screen, projection" />
+            <link rel="stylesheet" href="js/plugins/autocomplete/jquery-ui.min.css" type="text/css" media="screen, projection" />
+            <!--<script type="text/javascript" src="js/jquery.js"></script>-->
+            <script type="text/javascript" src="js/plugins/autocomplete/external/jquery/jquery.js"></script>
+            <script type="text/javascript" src="js/plugins/autocomplete/jquery-ui.min.js"></script>
+            <script type="text/javascript" src="js/jquery-migrate-1.2.1.js"></script>
+            <script type="text/javascript" src="js/jquery.magnific-popup.min.js"></script>
+            <script type="text/javascript" src="js/select2.js"></script>
+            <script type="text/javascript" src="js/form-validation.min.js"></script>
+    <!--<script type="text/javascript" src="js/select2.min.js"></script>-->
+            <script type="text/javascript">
+                $(document).ready(function () {
+                    $('.customdrop').select2();
+                    //untuk di server
+                   var url = '/index.php?link=hasil_pencarian';
+                   var href = $('a[href="' + url.substr(1) + '"]');
+                   if (href.hasClass('selector-url')) {
+                       var html = href.html();
+                       html = '<strong>' + html + '</strong>';
+                       href.html(html);
+                   }
+                    
+                    // var url = '/index.php?link=hasil_pencarian';
+                    // var href = $('a[href="' + url.substr(url.indexOf("/") + 11) + '"]');
+                    // if (href.hasClass('selector-url')) {
+                        // var html = href.html();
+                        // html = '<strong>' + html + '</strong>';
+                        // href.html(html);
+                    // }
+
+                });
+            </script>
+            <style type="text/css">
+                .loading
+                { 
+                    background: url("http://mfdonline.bps.go.id/images/loading_small.gif") right no-repeat; 
+
+                }
+
+                .row
+                {
+                    width: 230px;
+                }
+
+                select:after
+                {
+                    content: url("http://mfdonline.bps.go.id/images/loading_small.gif");
+                    vertical-align: middle;
+                }
+
+                .table_content
+                {
+                    background-color: #c3d1d5;
+                    font-family: calibri;
+                    font-size: 14px;
+                    text-align: center;
+                }
+
+                td
+                {
+                    font-family: calibri;
+                    font-size: 14px;
+                }
+
+                option, select {
+                    font-size: 14px;
+                    font-family: calibri;
+                }
+
+                input, select, textarea {
+                    border-radius: 3px;
+                    line-height: 20px;
+                }
+
+                /*                option{
+                                    width: 170px;
+                                }
+                
+                                select{
+                                    width: 200px;
+                                }*/
+                select.prop{
+                    width: 250px;
+                }
+                select.kab{
+                    width: 250px;
+                }
+                select.kec{
+                    width: 250px;
+                }
+                select.ds{
+                    width: 250px;
+                }
+                select.bs{
+                    width: 250px;
+                }
+                div.loadingcontainer {
+                    background-color: #eee;
+                    background-image: url('http://mfdonline.bps.go.id//images/loading_medium.gif');
+                    background-position:  center center;
+                    background-repeat: no-repeat;
+                    opacity: 1;
+                }
+                div.loadingcontainer * {
+                    opacity: .9;
+                }
+                
+                .errorMasking{
+                    border:solid;
+                    border-color:red;
+                    border-style:solid;
+                    border-width: 2px;
+                }
+
+            </style>
+
+            <title>MFD Online</title>
+    </head>
+    <body>
+                                <div id="wrapper">
+            <div id="header" style="background: url('images/header.jpg') no-repeat;">
+                <div id="logo">
+                    <h1><a href=index.php?link=MfvEyf2./bENw>SISTEM PEMUTAKHIRAN MFD DAN MBS</a></h1>
+                    <p><strong><blink>Periode Pemutakhiran Semester 1 Tahun 2020</blink></strong> </p>
+                    <p align="right" style="color: black; font-weight: bold;">Sunday, 02 February 2020</p>
+                
+                <span class="style4"></span>
+            <!-- end #header -->
+            <div id="menu">
+                <ul>
+                    <li class="current_page_item"><a href=index.php?link=MfvEyf2./bENw>Beranda</a></li>
+                    <!--<li><a href="index.php?link=about">Sekilas MFD</a></li>-->
+                                        <!--<li><a href=>Hubungi Kami</a></li>-->
+                </ul>
+            <!-- end #menu -->
+
+<style>
+    .alert-danger, .alert-error {
+        background-color: #f2dede;
+        border-color: #eed3d7;
+        color: #b94a48;
+    }
+    .alert {
+        background-color: #fcf8e3;
+        border: 1px solid #fbeed5;
+        border-radius: 4px;
+        color: #c09853;
+        margin-bottom: -18px;
+        padding: 8px 35px 8px 14px;
+        text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
+    }
+    .alert-info {
+        background-color: #d9edf7;
+        border-color: #bce8f1;
+        color: #3a87ad;
+    }
+</style>
+
+<div id="page">
+    <div id="page-bgtop">
+        <div id="page-bgbtm">
+            <div id="content">
+                <div class="post">
+                    <div class="post-bgtop">
+                        <div class="post-bgbtm">
+                            <h2 class="title">HASIL PENCARIAN WILAYAH</h2>
+<div class="entry">
+
+    <table width="600" height="53" border="0" align="center">
+  	<tr class="hasilproses">
+	<td>
+Terdapat 45 desa/kelurahan di Indonesia dengan nama seperti 'x'.	</tr>
+	</td>
+</table>
+
+<br />
+
+<table border="0" cellspacing="1" cellpadding="5" align="center" width="600">
+	<tr class="table_header">
+		<th width="15">NO</th>
+		<th colspan="2">PROVINSI</th>
+		<th colspan="2">KABUPATEN/KOTA</th>
+		<th colspan="2">KECAMATAN</th>
+		<th colspan="2">DESA/KELURAHAN</th>
+	</tr>
+	
+		
+	<tr class="table_content">
+		<td align="center"> 1 </td>
+		<td align="center" width="10"> 11 </td>
+		<td width="100"> ACEH                                               </td>
+		<td align="center" width="10"> 03 </td>
+		<td width="100"> KABUPATEN ACEH SELATAN                                       </td>
+		<td align="center" width="10"> 010 </td>
+		<td width="100"> TRUMON                                             </td>
+		<td align="center" width="10"> 030 </td>
+		<td width="100">SEUNABOK JAYA (EX UPT V)                          </td>
+	</tr>
+		
+	<tr class="table_content">
+		<td align="center"> 2 </td>
+		<td align="center" width="10"> 11 </td>
+		<td width="100"> ACEH                                               </td>
+		<td align="center" width="10"> 08 </td>
+		<td width="100"> KABUPATEN ACEH BESAR                                         </td>
+		<td align="center" width="10"> 090 </td>
+		<td width="100"> INGIN JAYA                                         </td>
+		<td align="center" width="10"> 022 </td>
+		<td width="100">UJONG XII                                         </td>
+	</tr>
+		
+	<tr class="table_content">
+		<td align="center"> 3 </td>
+		<td align="center" width="10"> 11 </td>
+		<td width="100"> ACEH                                               </td>
+		<td align="center" width="10"> 11 </td>
+		<td width="100"> KABUPATEN ACEH UTARA                                         </td>
+		<td align="center" width="10"> 060 </td>
+		<td width="100"> MATANGKULI                                         </td>
+		<td align="center" width="10"> 094 </td>
+		<td width="100">PARANG IX                                         </td>
+	</tr>
+		
+	<tr class="table_content">
+		<td align="center"> 4 </td>
+		<td align="center" width="10"> 11 </td>
+		<td width="100"> ACEH                                               </td>
+		<td align="center" width="10"> 11 </td>
+		<td width="100"> KABUPATEN ACEH UTARA                                         </td>
+		<td align="center" width="10"> 070 </td>
+		<td width="100"> COT GIREK                                          </td>
+		<td align="center" width="10"> 006 </td>
+		<td width="100">BATU XII                                          </td>
+	</tr>
+		
+	<tr class="table_content">
+		<td align="center"> 5 </td>
+		<td align="center" width="10"> 12 </td>
+		<td width="100"> SUMATERA UTARA                                     </td>
+		<td align="center" width="10"> 03 </td>
+		<td width="100"> KABUPATEN TAPANULI SELATAN                                   </td>
+		<td align="center" width="10"> 070 </td>
+		<td width="100"> ANGKOLA TIMUR                                      </td>
+		<td align="center" width="10"> 096 </td>
+		<td width="100">PAL XI                                            </td>
+	</tr>
+		
+	<tr class="table_content">
+		<td align="center"> 6 </td>
+		<td align="center" width="10"> 12 </td>
+		<td width="100"> SUMATERA UTARA                                     </td>
+		<td align="center" width="10"> 05 </td>
+		<td width="100"> KABUPATEN TAPANULI UTARA                                     </td>
+		<td align="center" width="10"> 060 </td>
+		<td width="100"> TARUTUNG                                           </td>
+		<td align="center" width="10"> 026 </td>
+		<td width="100">HUTA TORUAN XI                                    </td>
+	</tr>
+		
+	<tr class="table_content">
+		<td align="center"> 7 </td>
+		<td align="center" width="10"> 12 </td>
+		<td width="100"> SUMATERA UTARA                                     </td>
+		<td align="center" width="10"> 05 </td>
+		<td width="100"> KABUPATEN TAPANULI UTARA                                     </td>
+		<td align="center" width="10"> 060 </td>
+		<td width="100"> TARUTUNG                                           </td>
+		<td align="center" width="10"> 027 </td>
+		<td width="100">HUTA TORUAN IX                                    </td>
+	</tr>
+		
+	<tr class="table_content">
+		<td align="center"> 8 </td>
+		<td align="center" width="10"> 12 </td>
+		<td width="100"> SUMATERA UTARA                                     </td>
+		<td align="center" width="10"> 05 </td>
+		<td width="100"> KABUPATEN TAPANULI UTARA                                     </td>
+		<td align="center" width="10"> 060 </td>
+		<td width="100"> TARUTUNG                                           </td>
+		<td align="center" width="10"> 028 </td>
+		<td width="100">HUTA TORUAN X                                     </td>
+	</tr>
+		
+	<tr class="table_content">
+		<td align="center"> 9 </td>
+		<td align="center" width="10"> 12 </td>
+		<td width="100"> SUMATERA UTARA                                     </td>
+		<td align="center" width="10"> 08 </td>
+		<td width="100"> KABUPATEN ASAHAN                                             </td>
+		<td align="center" width="10"> 070 </td>
+		<td width="100"> AIR BATU                                           </td>
+		<td align="center" width="10"> 002 </td>
+		<td width="100">PERKEBUNAN AIR BATU III/IX                        </td>
+	</tr>
+		
+	<tr class="table_content">
+		<td align="center"> 10 </td>
+		<td align="center" width="10"> 12 </td>
+		<td width="100"> SUMATERA UTARA                                     </td>
+		<td align="center" width="10"> 10 </td>
+		<td width="100"> KABUPATEN DAIRI                                              </td>
+		<td align="center" width="10"> 050 </td>
+		<td width="100"> SUMBUL                                             </td>
+		<td align="center" width="10"> 009 </td>
+		<td width="100">PEGAGAN JULU IX                                   </td>
+	</tr>
+		
+	<tr class="table_content">
+		<td align="center"> 11 </td>
+		<td align="center" width="10"> 12 </td>
+		<td width="100"> SUMATERA UTARA                                     </td>
+		<td align="center" width="10"> 10 </td>
+		<td width="100"> KABUPATEN DAIRI                                              </td>
+		<td align="center" width="10"> 050 </td>
+		<td width="100"> SUMBUL                                             </td>
+		<td align="center" width="10"> 010 </td>
+		<td width="100">PEGAGAN JULU X                                    </td>
+	</tr>
+		
+	<tr class="table_content">
+		<td align="center"> 12 </td>
+		<td align="center" width="10"> 12 </td>
+		<td width="100"> SUMATERA UTARA                                     </td>
+		<td align="center" width="10"> 12 </td>
+		<td width="100"> KABUPATEN DELI SERDANG                                       </td>
+		<td align="center" width="10"> 040 </td>
+		<td width="100"> KUTALIMBARU                                        </td>
+		<td align="center" width="10"> 006 </td>
+		<td width="100">PASAR X                                           </td>
+	</tr>
+		
+	<tr class="table_content">
+		<td align="center"> 13 </td>
+		<td align="center" width="10"> 13 </td>
+		<td width="100"> SUMATERA BARAT                                     </td>
+		<td align="center" width="10"> 02 </td>
+		<td width="100"> KABUPATEN PESISIR SELATAN                                    </td>
+		<td align="center" width="10"> 040 </td>
+		<td width="100"> LINGGO SARI BAGANTI                                </td>
+		<td align="center" width="10"> 004 </td>
+		<td width="100">PADANG XI PUNGGASAN                               </td>
+	</tr>
+		
+	<tr class="table_content">
+		<td align="center"> 14 </td>
+		<td align="center" width="10"> 13 </td>
+		<td width="100"> SUMATERA BARAT                                     </td>
+		<td align="center" width="10"> 71 </td>
+		<td width="100"> KOTA PADANG                                             </td>
+		<td align="center" width="10"> 030 </td>
+		<td width="100"> LUBUK BEGALUNG                                     </td>
+		<td align="center" width="10"> 007 </td>
+		<td width="100">KAMPUNG BARU NAN XX                               </td>
+	</tr>
+		
+	<tr class="table_content">
+		<td align="center"> 15 </td>
+		<td align="center" width="10"> 13 </td>
+		<td width="100"> SUMATERA BARAT                                     </td>
+		<td align="center" width="10"> 71 </td>
+		<td width="100"> KOTA PADANG                                             </td>
+		<td align="center" width="10"> 030 </td>
+		<td width="100"> LUBUK BEGALUNG                                     </td>
+		<td align="center" width="10"> 010 </td>
+		<td width="100">PAMPANGAN NAN XX                                  </td>
+	</tr>
+		
+	<tr class="table_content">
+		<td align="center"> 16 </td>
+		<td align="center" width="10"> 13 </td>
+		<td width="100"> SUMATERA BARAT                                     </td>
+		<td align="center" width="10"> 71 </td>
+		<td width="100"> KOTA PADANG                                             </td>
+		<td align="center" width="10"> 030 </td>
+		<td width="100"> LUBUK BEGALUNG                                     </td>
+		<td align="center" width="10"> 011 </td>
+		<td width="100">KOTO BARU NAN XX                                  </td>
+	</tr>
+		
+	<tr class="table_content">
+		<td align="center"> 17 </td>
+		<td align="center" width="10"> 13 </td>
+		<td width="100"> SUMATERA BARAT                                     </td>
+		<td align="center" width="10"> 71 </td>
+		<td width="100"> KOTA PADANG                                             </td>
+		<td align="center" width="10"> 030 </td>
+		<td width="100"> LUBUK BEGALUNG                                     </td>
+		<td align="center" width="10"> 012 </td>
+		<td width="100">TANJUANG AUR NAN XX                               </td>
+	</tr>
+		
+	<tr class="table_content">
+		<td align="center"> 18 </td>
+		<td align="center" width="10"> 13 </td>
+		<td width="100"> SUMATERA BARAT                                     </td>
+		<td align="center" width="10"> 71 </td>
+		<td width="100"> KOTA PADANG                                             </td>
+		<td align="center" width="10"> 030 </td>
+		<td width="100"> LUBUK BEGALUNG                                     </td>
+		<td align="center" width="10"> 013 </td>
+		<td width="100">GURUN LAWEH NAN XX                                </td>
+	</tr>
+		
+	<tr class="table_content">
+		<td align="center"> 19 </td>
+		<td align="center" width="10"> 13 </td>
+		<td width="100"> SUMATERA BARAT                                     </td>
+		<td align="center" width="10"> 71 </td>
+		<td width="100"> KOTA PADANG                                             </td>
+		<td align="center" width="10"> 030 </td>
+		<td width="100"> LUBUK BEGALUNG                                     </td>
+		<td align="center" width="10"> 014 </td>
+		<td width="100">BANUARAN NAN XX                                   </td>
+	</tr>
+		
+	<tr class="table_content">
+		<td align="center"> 20 </td>
+		<td align="center" width="10"> 13 </td>
+		<td width="100"> SUMATERA BARAT                                     </td>
+		<td align="center" width="10"> 71 </td>
+		<td width="100"> KOTA PADANG                                             </td>
+		<td align="center" width="10"> 030 </td>
+		<td width="100"> LUBUK BEGALUNG                                     </td>
+		<td align="center" width="10"> 016 </td>
+		<td width="100">LUBUK BEGALUNG NAN XX                             </td>
+	</tr>
+		
+	<tr class="table_content">
+		<td align="center"> 21 </td>
+		<td align="center" width="10"> 13 </td>
+		<td width="100"> SUMATERA BARAT                                     </td>
+		<td align="center" width="10"> 71 </td>
+		<td width="100"> KOTA PADANG                                             </td>
+		<td align="center" width="10"> 030 </td>
+		<td width="100"> LUBUK BEGALUNG                                     </td>
+		<td align="center" width="10"> 020 </td>
+		<td width="100">CENGKEH NAN XX                                    </td>
+	</tr>
+		
+	<tr class="table_content">
+		<td align="center"> 22 </td>
+		<td align="center" width="10"> 13 </td>
+		<td width="100"> SUMATERA BARAT                                     </td>
+		<td align="center" width="10"> 71 </td>
+		<td width="100"> KOTA PADANG                                             </td>
+		<td align="center" width="10"> 030 </td>
+		<td width="100"> LUBUK BEGALUNG                                     </td>
+		<td align="center" width="10"> 022 </td>
+		<td width="100">GATES NAN XX                                      </td>
+	</tr>
+		
+	<tr class="table_content">
+		<td align="center"> 23 </td>
+		<td align="center" width="10"> 13 </td>
+		<td width="100"> SUMATERA BARAT                                     </td>
+		<td align="center" width="10"> 71 </td>
+		<td width="100"> KOTA PADANG                                             </td>
+		<td align="center" width="10"> 030 </td>
+		<td width="100"> LUBUK BEGALUNG                                     </td>
+		<td align="center" width="10"> 023 </td>
+		<td width="100">PAGAMBIRAN AMPULU NAN XX                          </td>
+	</tr>
+		
+	<tr class="table_content">
+		<td align="center"> 24 </td>
+		<td align="center" width="10"> 13 </td>
+		<td width="100"> SUMATERA BARAT                                     </td>
+		<td align="center" width="10"> 71 </td>
+		<td width="100"> KOTA PADANG                                             </td>
+		<td align="center" width="10"> 030 </td>
+		<td width="100"> LUBUK BEGALUNG                                     </td>
+		<td align="center" width="10"> 025 </td>
+		<td width="100">PARAK LAWEH PULAU AIR NAN XX                      </td>
+	</tr>
+		
+	<tr class="table_content">
+		<td align="center"> 25 </td>
+		<td align="center" width="10"> 13 </td>
+		<td width="100"> SUMATERA BARAT                                     </td>
+		<td align="center" width="10"> 71 </td>
+		<td width="100"> KOTA PADANG                                             </td>
+		<td align="center" width="10"> 030 </td>
+		<td width="100"> LUBUK BEGALUNG                                     </td>
+		<td align="center" width="10"> 026 </td>
+		<td width="100">TANJUNG SABA PITAMEH NAN XX                       </td>
+	</tr>
+		
+	<tr class="table_content">
+		<td align="center"> 26 </td>
+		<td align="center" width="10"> 13 </td>
+		<td width="100"> SUMATERA BARAT                                     </td>
+		<td align="center" width="10"> 71 </td>
+		<td width="100"> KOTA PADANG                                             </td>
+		<td align="center" width="10"> 030 </td>
+		<td width="100"> LUBUK BEGALUNG                                     </td>
+		<td align="center" width="10"> 027 </td>
+		<td width="100">TANAH SIRAH PIAI NAN XX                           </td>
+	</tr>
+		
+	<tr class="table_content">
+		<td align="center"> 27 </td>
+		<td align="center" width="10"> 13 </td>
+		<td width="100"> SUMATERA BARAT                                     </td>
+		<td align="center" width="10"> 71 </td>
+		<td width="100"> KOTA PADANG                                             </td>
+		<td align="center" width="10"> 030 </td>
+		<td width="100"> LUBUK BEGALUNG                                     </td>
+		<td align="center" width="10"> 028 </td>
+		<td width="100">KAMPUNG JUA NAN XX                                </td>
+	</tr>
+		
+	<tr class="table_content">
+		<td align="center"> 28 </td>
+		<td align="center" width="10"> 13 </td>
+		<td width="100"> SUMATERA BARAT                                     </td>
+		<td align="center" width="10"> 71 </td>
+		<td width="100"> KOTA PADANG                                             </td>
+		<td align="center" width="10"> 030 </td>
+		<td width="100"> LUBUK BEGALUNG                                     </td>
+		<td align="center" width="10"> 029 </td>
+		<td width="100">BATUANG TABA NAN XX                               </td>
+	</tr>
+		
+	<tr class="table_content">
+		<td align="center"> 29 </td>
+		<td align="center" width="10"> 13 </td>
+		<td width="100"> SUMATERA BARAT                                     </td>
+		<td align="center" width="10"> 72 </td>
+		<td width="100"> KOTA SOLOK                                              </td>
+		<td align="center" width="10"> 010 </td>
+		<td width="100"> LUBUK SIKARAH                                      </td>
+		<td align="center" width="10"> 004 </td>
+		<td width="100">IX KORONG                                         </td>
+	</tr>
+		
+	<tr class="table_content">
+		<td align="center"> 30 </td>
+		<td align="center" width="10"> 14 </td>
+		<td width="100"> RIAU                                               </td>
+		<td align="center" width="10"> 09 </td>
+		<td width="100"> KABUPATEN ROKAN HILIR                                        </td>
+		<td align="center" width="10"> 010 </td>
+		<td width="100"> TANAH PUTIH                                        </td>
+		<td align="center" width="10"> 013 </td>
+		<td width="100">BANJAR XII                                        </td>
+	</tr>
+		
+	<tr class="table_content">
+		<td align="center"> 31 </td>
+		<td align="center" width="10"> 15 </td>
+		<td width="100"> JAMBI                                              </td>
+		<td align="center" width="10"> 04 </td>
+		<td width="100"> KABUPATEN BATANG HARI                                        </td>
+		<td align="center" width="10"> 011 </td>
+		<td width="100"> MARO SEBO ULU                                      </td>
+		<td align="center" width="10"> 011 </td>
+		<td width="100">RENGAS IX                                         </td>
+	</tr>
+		
+	<tr class="table_content">
+		<td align="center"> 32 </td>
+		<td align="center" width="10"> 16 </td>
+		<td width="100"> SUMATERA SELATAN                                   </td>
+		<td align="center" width="10"> 03 </td>
+		<td width="100"> KABUPATEN MUARA ENIM                                         </td>
+		<td align="center" width="10"> 070 </td>
+		<td width="100"> RAMBANG NIRU                                       </td>
+		<td align="center" width="10"> 006 </td>
+		<td width="100">AIR ENAU UPT XI                                   </td>
+	</tr>
+		
+	<tr class="table_content">
+		<td align="center"> 33 </td>
+		<td align="center" width="10"> 16 </td>
+		<td width="100"> SUMATERA SELATAN                                   </td>
+		<td align="center" width="10"> 09 </td>
+		<td width="100"> KABUPATEN OGAN KOMERING ULU TIMUR                            </td>
+		<td align="center" width="10"> 041 </td>
+		<td width="100"> MADANG SUKU III                                    </td>
+		<td align="center" width="10"> 001 </td>
+		<td width="100">BATU MARTA X                                      </td>
+	</tr>
+		
+	<tr class="table_content">
+		<td align="center"> 34 </td>
+		<td align="center" width="10"> 18 </td>
+		<td width="100"> LAMPUNG                                            </td>
+		<td align="center" width="10"> 04 </td>
+		<td width="100"> KABUPATEN LAMPUNG TIMUR                                      </td>
+		<td align="center" width="10"> 082 </td>
+		<td width="100"> LABUHAN RATU                                       </td>
+		<td align="center" width="10"> 011 </td>
+		<td width="100">LABUHAN RATU IX                                   </td>
+	</tr>
+		
+	<tr class="table_content">
+		<td align="center"> 35 </td>
+		<td align="center" width="10"> 52 </td>
+		<td width="100"> NUSA TENGGARA BARAT                                </td>
+		<td align="center" width="10"> 01 </td>
+		<td width="100"> KABUPATEN LOMBOK BARAT                                       </td>
+		<td align="center" width="10"> 050 </td>
+		<td width="100"> NARMADA                                            </td>
+		<td align="center" width="10"> 016 </td>
+		<td width="100">GERIMAX INDAH                                     </td>
+	</tr>
+		
+	<tr class="table_content">
+		<td align="center"> 36 </td>
+		<td align="center" width="10"> 61 </td>
+		<td width="100"> KALIMANTAN BARAT                                   </td>
+		<td align="center" width="10"> 12 </td>
+		<td width="100"> KABUPATEN KUBU RAYA                                          </td>
+		<td align="center" width="10"> 050 </td>
+		<td width="100"> SUNGAI KAKAP                                       </td>
+		<td align="center" width="10"> 009 </td>
+		<td width="100">PAL.IX                                            </td>
+	</tr>
+		
+	<tr class="table_content">
+		<td align="center"> 37 </td>
+		<td align="center" width="10"> 62 </td>
+		<td width="100"> KALIMANTAN TENGAH                                  </td>
+		<td align="center" width="10"> 12 </td>
+		<td width="100"> KABUPATEN BARITO TIMUR                                       </td>
+		<td align="center" width="10"> 020 </td>
+		<td width="100"> DUSUN TIMUR                                        </td>
+		<td align="center" width="10"> 002 </td>
+		<td width="100">SARAPAT (EX HARARA)                               </td>
+	</tr>
+		
+	<tr class="table_content">
+		<td align="center"> 38 </td>
+		<td align="center" width="10"> 63 </td>
+		<td width="100"> KALIMANTAN SELATAN                                 </td>
+		<td align="center" width="10"> 02 </td>
+		<td width="100"> KABUPATEN KOTABARU                                           </td>
+		<td align="center" width="10"> 140 </td>
+		<td width="100"> HAMPANG                                            </td>
+		<td align="center" width="10"> 006 </td>
+		<td width="100">PERAMASAN 2X9                                     </td>
+	</tr>
+		
+	<tr class="table_content">
+		<td align="center"> 39 </td>
+		<td align="center" width="10"> 94 </td>
+		<td width="100"> PAPUA                                              </td>
+		<td align="center" width="10"> 14 </td>
+		<td width="100"> KABUPATEN MAPPI                                              </td>
+		<td align="center" width="10"> 031 </td>
+		<td width="100"> PASSUE                                             </td>
+		<td align="center" width="10"> 006 </td>
+		<td width="100">KOTUP / XOTUP                                     </td>
+	</tr>
+		
+	<tr class="table_content">
+		<td align="center"> 40 </td>
+		<td align="center" width="10"> 94 </td>
+		<td width="100"> PAPUA                                              </td>
+		<td align="center" width="10"> 20 </td>
+		<td width="100"> KABUPATEN KEEROM                                             </td>
+		<td align="center" width="10"> 042 </td>
+		<td width="100"> ARSO BARAT                                         </td>
+		<td align="center" width="10"> 001 </td>
+		<td width="100">UPT ARSO X / YATURAHARJA                          </td>
+	</tr>
+		
+	<tr class="table_content">
+		<td align="center"> 41 </td>
+		<td align="center" width="10"> 94 </td>
+		<td width="100"> PAPUA                                              </td>
+		<td align="center" width="10"> 20 </td>
+		<td width="100"> KABUPATEN KEEROM                                             </td>
+		<td align="center" width="10"> 042 </td>
+		<td width="100"> ARSO BARAT                                         </td>
+		<td align="center" width="10"> 002 </td>
+		<td width="100">UPT ARSO XI / IFIA-FIA                            </td>
+	</tr>
+		
+	<tr class="table_content">
+		<td align="center"> 42 </td>
+		<td align="center" width="10"> 94 </td>
+		<td width="100"> PAPUA                                              </td>
+		<td align="center" width="10"> 20 </td>
+		<td width="100"> KABUPATEN KEEROM                                             </td>
+		<td align="center" width="10"> 050 </td>
+		<td width="100"> SKANTO                                             </td>
+		<td align="center" width="10"> 002 </td>
+		<td width="100">UPT ARSO XIII / NARAMBEN                          </td>
+	</tr>
+		
+	<tr class="table_content">
+		<td align="center"> 43 </td>
+		<td align="center" width="10"> 94 </td>
+		<td width="100"> PAPUA                                              </td>
+		<td align="center" width="10"> 20 </td>
+		<td width="100"> KABUPATEN KEEROM                                             </td>
+		<td align="center" width="10"> 050 </td>
+		<td width="100"> SKANTO                                             </td>
+		<td align="center" width="10"> 003 </td>
+		<td width="100">UPT ARSO XIV / WULUKUBUN                          </td>
+	</tr>
+		
+	<tr class="table_content">
+		<td align="center"> 44 </td>
+		<td align="center" width="10"> 94 </td>
+		<td width="100"> PAPUA                                              </td>
+		<td align="center" width="10"> 20 </td>
+		<td width="100"> KABUPATEN KEEROM                                             </td>
+		<td align="center" width="10"> 050 </td>
+		<td width="100"> SKANTO                                             </td>
+		<td align="center" width="10"> 007 </td>
+		<td width="100">UPT ARSO IX / INTAIMILYAN                         </td>
+	</tr>
+		
+	<tr class="table_content">
+		<td align="center"> 45 </td>
+		<td align="center" width="10"> 94 </td>
+		<td width="100"> PAPUA                                              </td>
+		<td align="center" width="10"> 20 </td>
+		<td width="100"> KABUPATEN KEEROM                                             </td>
+		<td align="center" width="10"> 050 </td>
+		<td width="100"> SKANTO                                             </td>
+		<td align="center" width="10"> 008 </td>
+		<td width="100">UPT ARSO XII / TRAIMILYAN                         </td>
+	</tr>
+		
+</table>
+
+
+                        
+                    
+                

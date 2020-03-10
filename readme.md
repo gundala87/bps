@@ -11,3 +11,11 @@ Langkah :
 05. Sekian
 
 Semoga bermanfaat !
+
+Informasi lebih lanjut bisa hubungi 
+Kang Kus
+08983134505
+
+Donasi :
+Bank Mandiri
+1160005851515
